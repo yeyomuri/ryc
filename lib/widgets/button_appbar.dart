@@ -13,7 +13,8 @@ class ButtonAppbar extends StatelessWidget {
       onPressed: () {},
       child: Text(
         title,
-        style: const TextStyle(fontSize: 30),
+        style: const TextStyle(
+            fontSize: 30, color: Colors.white, fontWeight: FontWeight.bold),
       ),
     );
   }
