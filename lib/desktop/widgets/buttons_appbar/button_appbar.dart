@@ -1,16 +1,21 @@
 import 'package:flutter/material.dart';
 
-class ButtonAppbar extends StatelessWidget {
+class ButtonAppbarDesktop extends StatelessWidget {
   final String title;
-  const ButtonAppbar({
+  final String route;
+  const ButtonAppbarDesktop({
     super.key,
     required this.title,
+    required this.route,
   });
 
   @override
   Widget build(BuildContext context) {
     return TextButton(
-      onPressed: () {},
+      autofocus: true,
+      onPressed: () {
+        Navigator.of(context).pushNamed(route);
+      },
       child: Text(
         title,
         style: const TextStyle(

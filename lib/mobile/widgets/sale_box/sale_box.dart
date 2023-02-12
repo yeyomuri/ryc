@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-class SaleBox extends StatelessWidget {
+class SaleBoxMobile extends StatelessWidget {
   final String title;
   final String image;
-  const SaleBox({
+  const SaleBoxMobile({
     super.key,
     required this.title,
     required this.image,
