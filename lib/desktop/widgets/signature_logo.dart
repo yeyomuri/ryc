@@ -10,7 +10,7 @@ class SignatureLogoDesktop extends StatelessWidget {
         height: 300,
         width: double.infinity,
         decoration: BoxDecoration(
-          border: Border.all(color: Colors.white),
+          border: Border.all(color: Colors.white54),
           borderRadius: BorderRadius.circular(20),
         ),
         child: const Text('Firma y logo'),

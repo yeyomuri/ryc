@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:ryc/mobile/widgets/buttons_appbar/set_buttons_appbar.dart';
 import 'package:ryc/mobile/widgets/icon_social_media.dart/set_icon_social_meida.dart';
-import 'package:ryc/mobile/widgets/sale_box/menu_sales.dart';
 import 'package:ryc/mobile/widgets/signature_logo.dart';
+import 'package:ryc/pages/set_sales.dart';
+import '../../mobile/widgets/buttons_appbar/set_buttons_appbar.dart';
 
-class MyMobileBody extends StatelessWidget {
-  const MyMobileBody({
-    super.key,
-  });
+class CyGorCollectionMobile extends StatelessWidget {
+  const CyGorCollectionMobile({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +28,7 @@ class MyMobileBody extends StatelessWidget {
           SizedBox(
             height: 40,
           ),
-          MenuSalesMobile(),
+          SetSales(),
           SizedBox(
             height: 80,
           ),
@@ -38,6 +36,7 @@ class MyMobileBody extends StatelessWidget {
           SizedBox(
             height: 40,
           ),
+          Text('Mobile'),
           SetIconSocialMediaMobile()
         ],
       ),

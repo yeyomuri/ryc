@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ryc/desktop/widgets/sale_box/sale_box.dart';
+import 'package:ryc/utils/constants.dart';
 
 class MenuSalesDesktop extends StatelessWidget {
   const MenuSalesDesktop({
@@ -17,21 +18,21 @@ class MenuSalesDesktop extends StatelessWidget {
       crossAxisSpacing: 50,
       mainAxisSpacing: 50,
       children: const [
-        SaleBoxDesktop(
-          title: 'Cy-gor',
-          image: 'assets/1.jpg',
+        SaleBoxCategory(
+          title: product1,
+          image: 'assets/1.png',
         ),
-        SaleBoxDesktop(
-          title: 'Gecko',
-          image: 'assets/2.jpg',
+        SaleBoxCategory(
+          title: product2,
+          image: 'assets/1.png',
         ),
-        SaleBoxDesktop(
-          title: 'Litte mice',
-          image: 'assets/3.jpg',
+        SaleBoxCategory(
+          title: product3,
+          image: 'assets/1.png',
         ),
-        SaleBoxDesktop(
-          title: 'alien',
-          image: 'assets/4.jpg',
+        SaleBoxCategory(
+          title: product4,
+          image: 'assets/1.png',
         ),
       ],
     );

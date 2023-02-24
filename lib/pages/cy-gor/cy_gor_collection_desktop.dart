@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:ryc/desktop/widgets/buttons_appbar/set_buttons_appbar.dart';
 import 'package:ryc/desktop/widgets/icon_social_media.dart/set_icon_social_meida.dart';
-import 'package:ryc/desktop/widgets/sale_box/menu_sales.dart';
 import 'package:ryc/desktop/widgets/signature_logo.dart';
+import 'package:ryc/pages/set_sales.dart';
 
-class MyDesktopBody extends StatelessWidget {
-  const MyDesktopBody({
-    super.key,
-  });
+class CyGorCollectionDesktop extends StatelessWidget {
+  const CyGorCollectionDesktop({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -30,13 +28,13 @@ class MyDesktopBody extends StatelessWidget {
           SizedBox(height: 50),
           Divider(color: Colors.white),
           SizedBox(height: 20),
-          Text('Productos',
+          Text('Cy-Gor',
               style: TextStyle(fontSize: 30, color: Colors.white),
               textAlign: TextAlign.center),
           SizedBox(height: 20),
           Divider(color: Colors.white),
           SizedBox(height: 50),
-          MenuSalesDesktop(),
+          SetSales(),
           SizedBox(
             height: 80,
           ),
