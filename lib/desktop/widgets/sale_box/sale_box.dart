@@ -1,20 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:ryc/utils/constants.dart';
+import 'package:ryc/model/product.dart';
 
 class SaleBoxCategory extends StatelessWidget {
-  final String title;
-  final String image;
+  final Product product;
   const SaleBoxCategory({
     super.key,
-    required this.title,
-    required this.image,
+    required this.product,
   });
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
         onTap: () {
-          if (title == product1) {
+          if (product.name == 'Cy-gor') {
             //Cy-gor
             Navigator.pushNamed(context, '/cygor');
           }
@@ -33,14 +31,14 @@ class SaleBoxCategory extends StatelessWidget {
                 Flexible(
                   flex: 4,
                   child: Image.asset(
-                    image,
+                    product.image,
                   ),
                 ),
                 //const SizedBox(height: 20),
                 Flexible(
                   flex: 1,
                   child: Text(
-                    title,
+                    product.name,
                     style: const TextStyle(
                       color: Colors.white,
                       fontSize: 30,

@@ -8,8 +8,8 @@ class Product {
 //List of products
 
 final productList = [
-  const Product(name: 'Cy-gor', image: ''),
-  const Product(name: 'Gecko', image: ''),
-  const Product(name: 'Litle Mice', image: ''),
-  const Product(name: 'Alien', image: ''),
+  const Product(name: 'Cy-gor', image: 'assets/8.jpg'),
+  const Product(name: 'Gecko', image: 'assets/10.jpg'),
+  const Product(name: 'Litle Mice', image: 'assets/11.jpg'),
+  const Product(name: 'Alien', image: 'assets/7.jpg'),
 ];
