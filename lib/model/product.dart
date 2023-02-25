@@ -9,7 +9,7 @@ class Product {
 
 final productList = [
   const Product(name: 'Cy-gor', image: 'assets/8.jpg'),
-  const Product(name: 'Gecko', image: 'assets/10.jpg'),
-  const Product(name: 'Litle Mice', image: 'assets/11.jpg'),
+  const Product(name: 'Gecko', image: 'assets/9.jpg'),
+  const Product(name: 'Litle Mice', image: 'assets/10.jpg'),
   const Product(name: 'Alien', image: 'assets/7.jpg'),
 ];
