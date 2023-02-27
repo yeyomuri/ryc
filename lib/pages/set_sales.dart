@@ -1,110 +1,41 @@
 import 'package:flutter/material.dart';
-import 'package:ryc/pages/cy-gor/sale_box_collection.dart';
-import 'package:ryc/responsive/dimensions.dart';
+import 'package:ryc/model/category.dart';
+import 'package:ryc/pages/desktop/category_collection.dart';
 import 'package:ryc/utils/constants.dart';
 
 class SetSales extends StatelessWidget {
+  final String nameProduct;
   const SetSales({
     super.key,
+    required this.nameProduct,
   });
 
   @override
   Widget build(BuildContext context) {
-    int width = MediaQuery.of(context).size.width < mobileWidth ? 1 : 2;
-    return GridView.count(
-      physics:
-          const NeverScrollableScrollPhysics(), // to disable GridView's scrolling
-      shrinkWrap: true, // You won't see infinite size error
-      crossAxisCount: width,
-      crossAxisSpacing: 50,
-      mainAxisSpacing: 50,
-      children: const [
-        SaleBoxCollection(
-          price: '500.000',
-          title: product1,
-          image: 'assets/1.png',
-        ),
-        SaleBoxCollection(
-          price: '500.000',
-          title: product1,
-          image: 'assets/1.png',
-        ),
-        SaleBoxCollection(
-          price: '500.000',
-          title: product1,
-          image: 'assets/1.png',
-        ),
-        SaleBoxCollection(
-          price: '500.000',
-          title: product1,
-          image: 'assets/1.png',
-        ),
-        SaleBoxCollection(
-          price: '500.000',
-          title: product1,
-          image: 'assets/1.png',
-        ),
-        SaleBoxCollection(
-          price: '500.000',
-          title: product1,
-          image: 'assets/1.png',
-        ),
-        SaleBoxCollection(
-          price: '500.000',
-          title: product1,
-          image: 'assets/1.png',
-        ),
-        SaleBoxCollection(
-          price: '500.000',
-          title: product1,
-          image: 'assets/1.png',
-        ),
-        SaleBoxCollection(
-          price: '500.000',
-          title: product1,
-          image: 'assets/1.png',
-        ),
-        SaleBoxCollection(
-          price: '500.000',
-          title: product1,
-          image: 'assets/1.png',
-        ),
-        SaleBoxCollection(
-          price: '500.000',
-          title: product1,
-          image: 'assets/1.png',
-        ),
-        SaleBoxCollection(
-          price: '500.000',
-          title: product1,
-          image: 'assets/1.png',
-        ),
-        SaleBoxCollection(
-          price: '500.000',
-          title: product1,
-          image: 'assets/1.png',
-        ),
-        SaleBoxCollection(
-          price: '500.000',
-          title: product1,
-          image: 'assets/1.png',
-        ),
-        SaleBoxCollection(
-          price: '500.000',
-          title: product1,
-          image: 'assets/1.png',
-        ),
-        SaleBoxCollection(
-          price: '500.000',
-          title: product1,
-          image: 'assets/1.png',
-        ),
-        SaleBoxCollection(
-          price: '500.000',
-          title: product1,
-          image: 'assets/1.png',
-        ),
-      ],
+    List<Category> categoryList = [];
+
+    if (nameProduct == ProductName.cygor) {
+      categoryList = cygorList;
+    } else if (nameProduct == ProductName.gecko) {
+      categoryList = geckoList;
+    } else if (nameProduct == ProductName.alien) {
+      categoryList = alienList;
+    } else if (nameProduct == ProductName.littleMice) {
+      categoryList = littleMiceList;
+    }
+
+    return GridView.builder(
+      physics: const BouncingScrollPhysics(),
+      shrinkWrap: true,
+      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+        crossAxisCount: 2,
+        mainAxisSpacing: 50,
+        crossAxisSpacing: 50,
+      ),
+      itemCount: categoryList.length,
+      itemBuilder: (context, index) {
+        return CategoryCollection(product: categoryList[index]);
+      },
     );
   }
 }

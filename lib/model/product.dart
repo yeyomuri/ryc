@@ -1,3 +1,5 @@
+import 'package:ryc/utils/constants.dart';
+
 class Product {
   final String name;
   final String image;
@@ -8,8 +10,8 @@ class Product {
 //List of products
 
 final productList = [
-  const Product(name: 'Cy-gor', image: 'assets/8.jpg'),
-  const Product(name: 'Gecko', image: 'assets/9.jpg'),
-  const Product(name: 'Litle Mice', image: 'assets/10.jpg'),
-  const Product(name: 'Alien', image: 'assets/7.jpg'),
+  const Product(name: ProductName.cygor, image: 'assets/8.jpg'),
+  const Product(name: ProductName.gecko, image: 'assets/9.jpg'),
+  const Product(name: ProductName.littleMice, image: 'assets/10.jpg'),
+  const Product(name: ProductName.alien, image: 'assets/7.jpg'),
 ];

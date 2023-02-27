@@ -1,32 +1,25 @@
 import 'package:flutter/material.dart';
-import 'package:ryc/utils/constants.dart';
+import 'package:ryc/model/category.dart';
 
-class SaleBoxCollection extends StatelessWidget {
-  final String price;
-  final String title;
-  final String image;
-  const SaleBoxCollection({
-    super.key,
-    required this.title,
-    required this.image,
-    required this.price,
-  });
+class CategoryCollection extends StatelessWidget {
+  final Category product;
+  const CategoryCollection({super.key, required this.product});
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
         onTap: () {
-          if (title == product1) {
-            //Cy-gor
-            Navigator.pushNamed(context, '/specification');
-          }
+          Navigator.pushNamed(context, '/specification',
+              arguments: Category(
+                  name: product.name,
+                  imageList: product.imageList,
+                  cost: product.cost));
         },
         child: Expanded(
           child: Container(
             width: double.infinity,
             decoration: BoxDecoration(
               color: const Color.fromRGBO(28, 28, 30, 1),
-              //border: Border.all(color: Colors.white54),
               borderRadius: BorderRadius.circular(20),
             ),
             child: Column(
@@ -35,14 +28,13 @@ class SaleBoxCollection extends StatelessWidget {
                 Flexible(
                   flex: 5,
                   child: Image.asset(
-                    image,
+                    product.imageList[1],
                   ),
                 ),
-                //const SizedBox(height: 20),
                 Flexible(
                   flex: 1,
                   child: Text(
-                    title,
+                    product.name,
                     style: const TextStyle(
                       color: Colors.white,
                       fontSize: 30,
@@ -53,7 +45,7 @@ class SaleBoxCollection extends StatelessWidget {
                 Flexible(
                   flex: 1,
                   child: Text(
-                    '\$ $price',
+                    '\$ ${product.cost}',
                     style: const TextStyle(
                       color: Colors.white,
                       fontSize: 30,

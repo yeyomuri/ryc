@@ -1,4 +1,6 @@
-const String product1 = 'Cy-gor';
-const String product2 = 'Gecko';
-const String product3 = 'Litte mice';
-const String product4 = 'alien';
+class ProductName {
+  static const String cygor = 'Cy-gor';
+  static const String gecko = 'Gecko';
+  static const String littleMice = 'Litte mice';
+  static const String alien = 'alien';
+}

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ryc/responsive/desktop_body.dart';
+import 'package:ryc/pages/desktop/desktop_body.dart';
 import 'package:ryc/responsive/mobile_body.dart';
 import 'package:ryc/responsive/responsive_layout.dart';
 
