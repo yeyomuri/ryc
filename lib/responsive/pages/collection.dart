@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ryc/pages/desktop/cygor_collection.dart';
 import 'package:ryc/responsive/responsive_layout.dart';
-import 'package:ryc/utils/constants.dart';
 
 class Collection extends StatelessWidget {
   const Collection({super.key});

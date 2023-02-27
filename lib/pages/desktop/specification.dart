@@ -31,8 +31,8 @@ class SpecificationDesktop extends StatelessWidget {
           const SizedBox(height: 50),
           const Divider(color: Colors.white),
           const SizedBox(height: 20),
-          const Text('Nombre del producto',
-              style: TextStyle(fontSize: 30, color: Colors.white),
+          Text(product.name,
+              style: const TextStyle(fontSize: 30, color: Colors.white),
               textAlign: TextAlign.center),
           const SizedBox(height: 20),
           const Divider(color: Colors.white),
@@ -44,11 +44,18 @@ class SpecificationDesktop extends StatelessWidget {
               Column(
                 children: [
                   RichText(
-                    text: const TextSpan(
+                    text: TextSpan(
                       style: TextStyle(fontSize: 30, color: Colors.white),
                       children: [
-                        TextSpan(text: 'Nombre del producto\n'),
-                        TextSpan(text: 'Precio\n'),
+                        TextSpan(text: '${product.name}\n'),
+                        TextSpan(text: '${product.cost}\n'),
+
+                        ///*
+                        ///
+                        ///Variable que faltan por implementar y agregar en el model de categoria
+                        ///
+                        ///
+
                         TextSpan(text: 'Especificaciones\n'),
                         TextSpan(text: 'Edición limitada\n'),
                         TextSpan(text: 'Medidas\n'),

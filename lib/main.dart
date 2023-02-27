@@ -5,7 +5,6 @@ import 'package:ryc/desktop/pages/bonus.dart';
 import 'package:ryc/desktop/pages/contact.dart';
 import 'package:ryc/desktop/pages/terms_conditions.dart';
 import 'package:ryc/responsive/pages/collection.dart';
-import 'package:ryc/pages/desktop/specification.dart';
 import 'package:ryc/responsive/pages/home_page.dart';
 import 'package:ryc/mobile/pages/bonus.dart';
 import 'package:ryc/mobile/pages/contact.dart';
@@ -31,16 +30,6 @@ class MyApp extends StatelessWidget {
           '/': (context) => const HomePage(),
           '/collection': (context) => const Collection(),
           '/specification': (context) => const Specification(),
-          '/homeDesktop': (context) => const MyDesktopBody(),
-          '/productsCategoryDesktop': (context) => const MyDesktopBody(),
-          '/bonusDesktop': (context) => const BonusDesktop(),
-          '/termsConditionsDesktop': (context) =>
-              const TermsConditionsDesktop(),
-          '/contactDesktop': (context) => const ContactDesktop(),
-          '/homeMobile': (context) => const MyMobileBody(),
-          '/bonusMobile': (context) => const BonusMobile(),
-          '/termsConditionsMobile': (context) => const TermsConditionsMobile(),
-          '/contactMobile': (context) => const ContactMobile(),
         },
         initialRoute: '/',
         theme: ThemeData(
