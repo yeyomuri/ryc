@@ -13,6 +13,7 @@ import 'package:ryc/mobile/pages/terms_conditions.dart';
 import 'package:ryc/provider/image_specification.dart';
 import 'package:ryc/pages/desktop/desktop_body.dart';
 import 'package:ryc/responsive/mobile_body.dart';
+import 'package:ryc/responsive/pages/specification.dart';
 
 void main() => runApp(const MyApp());
 
@@ -28,9 +29,8 @@ class MyApp extends StatelessWidget {
       child: MaterialApp(
         routes: {
           '/': (context) => const HomePage(),
-          '/productsCategory': (context) => const Specication(),
           '/collection': (context) => const Collection(),
-          '/specification': (context) => const Specication(),
+          '/specification': (context) => const Specification(),
           '/homeDesktop': (context) => const MyDesktopBody(),
           '/productsCategoryDesktop': (context) => const MyDesktopBody(),
           '/bonusDesktop': (context) => const BonusDesktop(),

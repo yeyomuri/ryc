@@ -9,11 +9,14 @@ class CategoryCollection extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
         onTap: () {
-          Navigator.pushNamed(context, '/specification',
-              arguments: Category(
-                  name: product.name,
-                  imageList: product.imageList,
-                  cost: product.cost));
+          Navigator.pushNamed(
+            context,
+            '/specification',
+            arguments: Category(
+                name: product.name,
+                imageList: product.imageList,
+                cost: product.cost),
+          );
         },
         child: Expanded(
           child: Container(
